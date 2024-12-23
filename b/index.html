@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Names starting with "B" | Live Filtering Example (with Live Region)</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1
+            id="main"
+
+        >Live Filtering Example (with Live Region)</h1>
+
+        <section
+            id="section--filters"
+            aria-labelledby="filters"
+        >
+            <h2
+                id="filters"
+                tabindex="-1"
+            >Filters</h2>
+
+            <ul>
+                <li>
+                    <a href="../">Names (All Names)</a>
+                </li>
+
+                <li>
+                    <a href="../a">Names starting with "A"</a>
+                </li>
+
+                <li>
+                    <a
+                        href="../b"
+                        aria-current="page"
+                    ><strong aria-hidden="true">Current Page: </strong>Names starting with "B"</a>
+                </li>
+
+                <li>
+                    <a href="../c">Names starting with "C"</a>
+                </li>
+            </ul>
+        </section>
+
+        <section
+            id="section--names"
+            aria-labelledby="names"
+        >
+            <h2
+                id="names"
+                tabindex="-1"
+            >Names starting with "B"</h2>
+
+            <ul>
+                <li>Benjamin</li>
+
+                <li>Bennett</li>
+
+                <li>Brooks</li>
+
+                <li>Beau</li>
+
+                <li>Brooklyn</li>
+
+                <li>Blake</li>
+
+                <li>Bella</li>
+
+                <li>Bryson</li>
+
+                <li>Brayden</li>
+
+                <li>Plus additional names</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- A local copy of [WebReflection/custom-elements-builtin](https://github.com/WebReflection/custom-elements-builtin) -->
+    <script src="../assets/js/webreflection-custom-elements-builtin-safari-polyfill.js"></script>
+
+    <script src="../assets/js/custom-element-helpers.js"></script>
+
+    <script src="../assets/js/live-filtering-element.js"></script>
+</body>
+</html>

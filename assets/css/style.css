@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+html {
+    --color: #111;
+
+    color: var(--color);
+}
+
+button {
+    padding: 0.25rem;
+    font-size: 1rem;
+    color: var(--color);
+    background-color: #efefef;
+    border: 0.125rem solid var(--color);
+
+    &:focus-visible {
+        outline: 0.125rem solid var(--color);
+        outline-offset: 0.125rem;
+    }
+}
+
+#section--filters {
+    > ul {
+        a {
+            display: block;
+            width: fit-content;
+            padding: 0.125rem;
+        }
+    }
+}
+
+[is="live-filtering-element"] {
+    > ul.live-filters {
+        width: fit-content;
+
+        .filter {
+            position: relative;
+            padding: 0.125rem;
+
+            > input[type="checkbox"] {
+                
+            }
+
+            > label {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                }
+            }
+        }
+    }
+}
+
+dl.active-filters {
+    margin: 0;
+    
+    &:not([hidden]) {
+        @media (min-width: 40em) {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+        }
+    }
+
+    > dd {
+        margin: 0;
+
+        > ul {
+            padding-inline-start: 0;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            @media (min-width: 40em) {
+                margin: 0;
+            }
+        }
+    }
+}
